@@ -1,0 +1,206 @@
+
+:root {
+  --bg-color: #0b0d19;
+  --card-bg: rgba(20, 24, 45, 0.75);
+  --card-border: rgba(108, 99, 255, 0.3);
+  --card-glow: rgba(108, 99, 255, 0.15);
+  --primary-color: #6c63ff;
+  --accent-color: #00d2ff;
+  --text-main: #e2e8f0;
+  --text-muted: #a0aec0;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(108, 99, 255, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(0, 210, 255, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(15, 18, 37, 1) 0%, rgba(7, 8, 16, 1) 100%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: var(--font-family);
+  line-height: 1.7;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.titulo {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 35px 25px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px var(--card-glow);
+  text-align: center;
+}
+
+.titulo h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.titulo p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+
+h3 {
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.2) 0%, rgba(0, 210, 255, 0.1) 100%);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 900px;
+  margin: 25px 0 12px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+h3::before {
+  content: '✦';
+  color: var(--accent-color);
+  margin-right: 12px;
+  font-size: 1.1rem;
+}
+
+{
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 22px 28px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 24px var(--card-glow);
+  font-size: 1.02rem;
+  color: var(--text-main);
+  text-align: justify;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+p:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 210, 255, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 210, 255, 0.2);
+}
+
+
+p b {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+
+div:has(img) {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 16px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 25px 0;
+  box-shadow: 0 10px 30px var(--card-glow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+div:has(img):hover img {
+  transform: scale(1.02);
+}
+
+
+.nico {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+footer.footer {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 35px;
+}
+
+footer.footer p {
+  text-align: center;
+  background: rgba(15, 18, 37, 0.8);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 18px;
+}
+
+footer.footer p:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .titulo h1 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    padding: 12px 18px;
+  }
+
+  p {
+    padding: 16px 20px;
+    font-size: 0.95rem;
+  }
